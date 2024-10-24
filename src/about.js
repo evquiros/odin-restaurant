@@ -1,4 +1,12 @@
 function displayAbout() {
+    const nav = document.querySelector('nav')
+    nav.classList.add('nav-about')
+
+    const buttons = document.querySelectorAll('button')
+    buttons.forEach(button => {
+        button.classList.add('button-about')
+    });
+
     const content = document.querySelector('#content')
     content.innerHTML = ''
 
