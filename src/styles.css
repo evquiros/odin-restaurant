@@ -6,6 +6,7 @@
 
 :root {
     --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    --gold: #c0a756
 }
 
 body {
@@ -39,10 +40,10 @@ button {
 }
 
 button:hover {
-    color: gold;
+    color: var(--gold);
 }
 
-#content {
+.content-home {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -57,7 +58,7 @@ button:hover {
     text-align: center;
 }
 
-#content p {
+.content-home p {
     color: white;
     font-size: 3rem;
 }
@@ -70,11 +71,64 @@ button:hover {
     color: white;
 }
 
+.button-menu,
 .button-about {
     color: grey;
 }
 
+.nav-menu,
 .nav-about {
     background-color: white;
     box-shadow: var(--shadow);
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    text-align: center;
+    gap: 2rem;
+}
+
+.intro p {
+    width: 800px;
+    color: grey;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.container .right {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.container .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.container .left p{
+    width: 600px;
+    line-height: 2;
+}
+
+.container .left h1{
+    color: var(--gold);
+}
+
+.content-about {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
